@@ -6,9 +6,9 @@ You can also pick and delete only a specific object (e.g. cover).
 
 Delete Reaches
 --------------
-.. attention:: Deleting a reach does not delete the associated objects (channel, reach point, networkelement). See QGEP issue #436
 
 * Select **vw_qgep_reach** and change to edit mode.
+
 * Select the reach(es) you want to delete. You can click on an object or draw an area.
 
 .. figure:: images/select_tool.jpg
@@ -29,6 +29,7 @@ Delete Reaches
 
 .. figure:: images/delete_reach_confirm.jpg
 
+.. note:: Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.
 
 Delete Manholes and other Wastewater Structures
 ------------------------------------------------
@@ -42,7 +43,6 @@ Delete Manholes and other Wastewater Structures
 
 Delete Covers
 -------------
-.. attention:: Deleting a cover does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) from which you want the cover deleted
@@ -60,7 +60,6 @@ Delete Covers
 
 Delete Structure parts
 ----------------------
-.. attention:: Deleting a structure part does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) from which you want to delete a structure part
@@ -69,4 +68,14 @@ Delete Structure parts
 * Select the structure part you want to delete
 * Click the red x button to delete the structure parts
 * Click save on the form
+* Stop the editing mode and confirm changes to layer. All changes will be saved to database.
+
+Delete detailed geometries
+----------------------
+
+.. attention:: Deleting features directly from **wastewater_structure** will remove the complete wastewater structure from the database and not only the geometry of the wastewater structure!
+
+* Select **wastewater_structure** and change to edit mode
+* Activate the **Remove part** tool from the Advanced digitizing toolbar
+* Click on the parts you want to delete
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.

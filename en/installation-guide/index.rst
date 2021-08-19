@@ -1,3 +1,5 @@
+.. _installation-guide:
+
 QGEP Installation Guide
 =======================
 
@@ -12,8 +14,8 @@ get your system ready for running QGEP.
 
 .. toctree::
    :maxdepth: 3
-   :numbered:
 
+   requirements
    server
    database-initialization
    workstation
